@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html  lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>1. ユーザーページへのログイン方法</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
+      <link rel="stylesheet" href="../_static/romnnn_sphinx_press_theme.css">
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+
+      
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="索引" href="../genindex.html" />
+  <link rel="search" title="検索" href="../search.html" />
+  <link rel="next" title="2. プロフィール設定" href="01_Profile.html" />
+  <link rel="prev" title="doc.yaruyomi.com" href="../index.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <div class="home-link-container">
+      <router-link to="../index.html" class="home-link">
+      
+        <span class="site-name">dco.yaruyomi.com</span>
+    </router-link>
+  </div>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">検索</span>
+    <div class="searchformwrapper">
+      <form autocomplete="off" class="search" action="../search.html" method="get">
+        <input type="text" name="q" autocomplete="off" />
+        <input type="submit" value="検索" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#doc-yaruyomi-com">ユーザー機能</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">ユーザーページへのログイン方法</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#id2" class="reference internal">サイトを表示</a></li>
+                
+                  <li class="toctree-l2"><a href="#id3" class="reference internal">ログイン</a></li>
+                
+                  <li class="toctree-l2"><a href="#twitter" class="reference internal">Twitter の認証</a></li>
+                
+                  <li class="toctree-l2"><a href="#id4" class="reference internal">マイページ表示</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="01_Profile.html" class="reference internal ">プロフィール設定</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="02_CreateThread.html" class="reference internal ">スレッドの作成方法</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="03_ThreadManage.html" class="reference internal ">スレッド管理</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="04_CreateWork.html" class="reference internal ">作品ページの作成方法</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="05_WorkManage.html" class="reference internal ">作品ページ管理</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="06_AutoPost.html" class="reference internal ">自動投下</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="07_Setting.html" class="reference internal ">設定</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li><span class="section-number">1. </span>ユーザーページへのログイン方法</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="../index.html"
+       title="前の章へ">← doc.yaruyomi.com</a>
+  </li>
+  <li class="next">
+    <a href="01_Profile.html"
+       title="次の章へ"><span class="section-number">2. </span>プロフィール設定 →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">1. </span>ユーザーページへのログイン方法<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2><span class="section-number">1.1. </span>サイトを表示<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="../_images/00_HowToLogin_01.png" src="../_images/00_HowToLogin_01.png" />
+<p>サイトへアクセスし、画面右上にある「Login」ボタンを押下します。</p>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">1.2. </span>ログイン<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="../_images/00_HowToLogin_02.png" src="../_images/00_HowToLogin_02.png" />
+<div class="line-block">
+<div class="line">ログイン画面が表示されます。</div>
+<div class="line">「Twitterアカウントでログイン」ボタンを押下します。</div>
+<div class="line">※</div>
+<div class="line">掲示板ではTwitterアカウントを利用してのログインのみ対応しています。</div>
+<div class="line">Twitterアカウントをお持ちでない方は予め作成をお願いいたします。</div>
+</div>
+</div>
+<div class="section" id="twitter">
+<h2><span class="section-number">1.3. </span>Twitter の認証<a class="headerlink" href="#twitter" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="../_images/00_HowToLogin_03.png" src="../_images/00_HowToLogin_03.png" />
+<p>Twitterの画面へ遷移し、ユーザーページを利用したいTwitterアカウントでログインしていることを確認して下さい。問題なければ「連携アプリを認証」ボタンを押下します。</p>
+</div>
+<div class="section" id="id4">
+<h2><span class="section-number">1.4. </span>マイページ表示<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="../_images/00_HowToLogin_04.png" src="../_images/00_HowToLogin_04.png" />
+<p>自動的に掲示板へ戻り、ユーザーページが表示されます。
+ログアウトしたい場合は、メニューにある「ログアウト」を押下して下さい。</p>
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="../index.html"
+       title="前の章へ">← doc.yaruyomi.com</a>
+  </li>
+  <li class="next">
+    <a href="01_Profile.html"
+       title="次の章へ"><span class="section-number">2. </span>プロフィール設定 →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2020, ◆Y0H0G.GOFk.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2 with <a href="https://github.com/romnnn/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>
