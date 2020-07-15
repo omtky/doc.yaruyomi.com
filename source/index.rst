@@ -6,7 +6,7 @@ doc.yaruyomi.com
 
 .. toctree::
    :maxdepth: 2
-   :caption: ユーザー機能
+   :caption: 【掲示板】ユーザー機能
    :numbered:
 
    /UserPage/00_HowToLogin
@@ -17,3 +17,10 @@ doc.yaruyomi.com
    /UserPage/05_WorkManage
    /UserPage/06_AutoPost
    /UserPage/07_Setting
+
+.. toctree::
+   :maxdepth: 2
+   :caption: その他
+   :numbered:
+
+   /Other/00_AboutUs

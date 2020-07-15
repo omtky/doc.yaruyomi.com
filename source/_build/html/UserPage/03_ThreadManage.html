@@ -1,38 +1,228 @@
-
 <!DOCTYPE html>
-
-<html lang="ja">
+<html  lang="ja">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4. スレッド管理 &#8212; dco.yaruyomi.com 0.1 ドキュメント</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/translations.js"></script>
-    <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="5. 作品ページの作成方法" href="04_CreateWork.html" />
-    <link rel="prev" title="3. スレッドの作成方法" href="02_CreateThread.html" />
-   
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>4. スレッド管理</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
+      <link rel="stylesheet" href="../_static/romnnn_sphinx_press_theme.css">
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
 
-  </head><body>
+      <!-- sphinx script_files -->
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+
+      
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="索引" href="../genindex.html" />
+  <link rel="search" title="検索" href="../search.html" />
+  <link rel="next" title="5. 作品ページの作成方法" href="04_CreateWork.html" />
+  <link rel="prev" title="3. スレッドの作成方法" href="02_CreateThread.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <div class="home-link-container">
+      <router-link to="../index.html" class="home-link">
+      
+        <span class="site-name">dco.yaruyomi.com</span>
+    </router-link>
+  </div>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="../index.html#doc-yaruyomi-com"
+         class="nav-link  router-link-active">
+         【掲示板】ユーザー機能
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#doc-yaruyomi-com"
+         class="nav-link ">
+         その他
+      </a>
+    </div>
   
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
           
+          <navlinks>
+            
 
-          <div class="body" role="main">
+  
+    <div class="nav-item">
+      <a href="../index.html#doc-yaruyomi-com"
+         class="nav-link  router-link-active">
+         【掲示板】ユーザー機能
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#doc-yaruyomi-com"
+         class="nav-link ">
+         その他
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">検索</span>
+    <div class="searchformwrapper">
+      <form autocomplete="off" class="search" action="../search.html" method="get">
+        <input type="text" name="q" autocomplete="off" />
+        <input type="submit" value="検索" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#doc-yaruyomi-com">【掲示板】ユーザー機能</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="00_HowToLogin.html" class="reference internal ">ユーザーページへのログイン方法</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="01_Profile.html" class="reference internal ">プロフィール設定</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="02_CreateThread.html" class="reference internal ">スレッドの作成方法</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">スレッド管理</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#id2" class="reference internal">スレッド一覧</a></li>
+                
+                  <li class="toctree-l2"><a href="#id3" class="reference internal">スレッド管理ページ</a></li>
+                
+                  <li class="toctree-l2"><a href="#id4" class="reference internal">過去ログ化申請</a></li>
+                
+                  <li class="toctree-l2"><a href="#id5" class="reference internal">スレッドの削除申請</a></li>
+                
+                  <li class="toctree-l2"><a href="#id6" class="reference internal">スレッド申請の取り消し</a></li>
+                
+                  <li class="toctree-l2"><a href="#id7" class="reference internal">スレッド設定</a></li>
+                
+                  <li class="toctree-l2"><a href="#id8" class="reference internal">投下予告設定</a></li>
+                
+                  <li class="toctree-l2"><a href="#id9" class="reference internal">書き込み管理</a></li>
+                
+                  <li class="toctree-l2"><a href="#id10" class="reference internal">スレッド画像再作成</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="04_CreateWork.html" class="reference internal ">作品ページの作成方法</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="05_WorkManage.html" class="reference internal ">作品ページ管理</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="06_AutoPost.html" class="reference internal ">自動投下</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="07_Setting.html" class="reference internal ">設定</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#doc-yaruyomi-com">その他</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../Other/00_AboutUs.html" class="reference internal ">当マニュアルについて</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li><span class="section-number">4. </span>スレッド管理</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="02_CreateThread.html"
+       title="前の章へ">← <span class="section-number">3. </span>スレッドの作成方法</a>
+  </li>
+  <li class="next">
+    <a href="04_CreateWork.html"
+       title="次の章へ"><span class="section-number">5. </span>作品ページの作成方法 →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
             
   <div class="section" id="id1">
 <h1><span class="section-number">4. </span>スレッド管理<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
@@ -121,82 +311,50 @@
 <img alt="../_images/03_ThreadManage_20.png" src="../_images/03_ThreadManage_20.png" />
 <p>書き込みの削除が完了します。</p>
 </div>
+<div class="section" id="id10">
+<h2><span class="section-number">4.9. </span>スレッド画像再作成<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">当掲示板ではスレッド作成時に、1レス目の内容を画像化してサイト上に表示していますが、</div>
+<div class="line">スレッド管理ページより任意のレス番号の内容で作成し直すことができます。</div>
+<div class="line">スレッド管理ページの「スレッド画像再作成」ボタンを押下します。</div>
+</div>
+<img alt="../_images/03_ThreadManage_21.png" src="../_images/03_ThreadManage_21.png" />
+<p>レス番号を入力する欄が表示されますので、画像作成に使用したいレスの番号を入力し、「OK」を押下します。</p>
+<img alt="../_images/03_ThreadManage_22.png" src="../_images/03_ThreadManage_22.png" />
+<p>画像の再作成が完了します。</p>
+<img alt="../_images/03_ThreadManage_23.png" src="../_images/03_ThreadManage_23.png" />
+<p>画面がリロードされて、再作成された画像が表示されます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>画像は同じファイル名で作成されるため、ブラウザのキャッシュが適用されます。
+その場合、再作成後も古い画像が残ったままとなりますので、ブラウザのキャッシュを削除するか、
+スーパーリロードを実行して下さい。</p>
+</div>
+</div>
 </div>
 
 
           </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">dco.yaruyomi.com</a></h1>
-
-
-
-
-
-
-
-
-<h3>ナビゲーション</h3>
-<p class="caption"><span class="caption-text">OverView</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="00_Profile.html">1. プロフィール設定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="01_HowToLogin.html">2. ユーザーページへのログイン方法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_CreateThread.html">3. スレッドの作成方法</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. スレッド管理</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_CreateWork.html">5. 作品ページの作成方法</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_WorkManage.html">6. 作品ページ管理</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_AutoPost.html">7. 自動投下</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_Setting.html">8. 設定</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="02_CreateThread.html" title="前の章へ"><span class="section-number">3. </span>スレッドの作成方法</a></li>
-      <li>Next: <a href="04_CreateWork.html" title="次の章へ"><span class="section-number">5. </span>作品ページの作成方法</a></li>
-  </ul></li>
-</ul>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="02_CreateThread.html"
+       title="前の章へ">← <span class="section-number">3. </span>スレッドの作成方法</a>
+  </li>
+  <li class="next">
+    <a href="04_CreateWork.html"
+       title="次の章へ"><span class="section-number">5. </span>作品ページの作成方法 →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2020, ◆Y0H0G.GOFk.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2 with <a href="https://github.com/romnnn/sphinx_press_theme">Press Theme</a>.
 </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">クイック検索</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="検索" />
-    </form>
+            </div>
+          </div>
+      </page>
     </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2020, ◆Y0H0G.GOFk.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="../_sources/UserPage/03_ThreadManage.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
     
-
     
   </body>
 </html>
