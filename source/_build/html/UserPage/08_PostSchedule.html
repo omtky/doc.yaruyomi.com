@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html  lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>8. 投下予告</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
+      <link rel="stylesheet" href="../_static/romnnn_sphinx_press_theme.css">
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+
+      
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="索引" href="../genindex.html" />
+  <link rel="search" title="検索" href="../search.html" />
+  <link rel="next" title="9. 設定" href="07_Setting.html" />
+  <link rel="prev" title="7. 自動投下" href="06_AutoPost.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <div class="home-link-container">
+      <router-link to="../index.html" class="home-link">
+      
+        <span class="site-name">dco.yaruyomi.com</span>
+    </router-link>
+  </div>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="../index.html#doc-yaruyomi-com"
+         class="nav-link  router-link-active">
+         【掲示板】ユーザー機能
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#doc-yaruyomi-com"
+         class="nav-link ">
+         その他
+      </a>
+    </div>
+  
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="../index.html#doc-yaruyomi-com"
+         class="nav-link  router-link-active">
+         【掲示板】ユーザー機能
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#doc-yaruyomi-com"
+         class="nav-link ">
+         その他
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">検索</span>
+    <div class="searchformwrapper">
+      <form autocomplete="off" class="search" action="../search.html" method="get">
+        <input type="text" name="q" autocomplete="off" />
+        <input type="submit" value="検索" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#doc-yaruyomi-com">【掲示板】ユーザー機能</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="00_HowToLogin.html" class="reference internal ">ユーザーページへのログイン方法</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="01_Profile.html" class="reference internal ">プロフィール設定</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="02_CreateThread.html" class="reference internal ">スレッドの作成方法</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="03_ThreadManage.html" class="reference internal ">スレッド管理</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="04_CreateWork.html" class="reference internal ">作品ページの作成方法</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="05_WorkManage.html" class="reference internal ">作品ページ管理</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="06_AutoPost.html" class="reference internal ">自動投下</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">投下予告</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#id2" class="reference internal">投下予告一覧</a></li>
+                
+                  <li class="toctree-l2"><a href="#id3" class="reference internal">投下予告作成管理ページ</a></li>
+                
+                  <li class="toctree-l2"><a href="#id4" class="reference internal">投下予告詳細</a></li>
+                
+                  <li class="toctree-l2"><a href="#id5" class="reference internal">投下予告編集</a></li>
+                
+                  <li class="toctree-l2"><a href="#id6" class="reference internal">投下予告削除</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="07_Setting.html" class="reference internal ">設定</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#doc-yaruyomi-com">その他</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../Other/00_AboutUs.html" class="reference internal ">当マニュアルについて</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li><span class="section-number">8. </span>投下予告</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="06_AutoPost.html"
+       title="前の章へ">← <span class="section-number">7. </span>自動投下</a>
+  </li>
+  <li class="next">
+    <a href="07_Setting.html"
+       title="次の章へ"><span class="section-number">9. </span>設定 →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">8. </span>投下予告<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2><span class="section-number">8.1. </span>投下予告一覧<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ユーザーページへログインし、「投下予告管理」を押下します。</p>
+<img alt="../_images/08_PostSchedule_01.png" src="../_images/08_PostSchedule_01.png" />
+<div class="line-block">
+<div class="line">作成した投下予告一覧が表示されます。</div>
+<div class="line">新規作成したい場合は右上の「新規作成」ボタンから作成できます。</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">8.2. </span>投下予告作成管理ページ<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<img alt="../_images/08_PostSchedule_02.png" src="../_images/08_PostSchedule_02.png" />
+<div class="line-block">
+<div class="line">投下予告の作成ページが開きます。</div>
+<div class="line">投下予告の内容を入力し登録ボタンを押下して登録します。</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2><span class="section-number">8.3. </span>投下予告詳細<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>投下予告一覧から詳細を確認したい投下予告のリンクを押下すると、詳細ページが表示されます。</p>
+<img alt="../_images/08_PostSchedule_03.png" src="../_images/08_PostSchedule_03.png" />
+</div>
+<div class="section" id="id5">
+<h2><span class="section-number">8.4. </span>投下予告編集<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>詳細ページの「編集」から編集ページへ遷移出来ます。</p>
+<img alt="../_images/08_PostSchedule_04.png" src="../_images/08_PostSchedule_04.png" />
+<div class="line-block">
+<div class="line">新規登録の際と同様に投下予告の内容を入力し、登録を行います。</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2><span class="section-number">8.5. </span>投下予告削除<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>詳細ページの「削除」から削除することが出来ます。</p>
+<img alt="../_images/08_PostSchedule_05.png" src="../_images/08_PostSchedule_05.png" />
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="06_AutoPost.html"
+       title="前の章へ">← <span class="section-number">7. </span>自動投下</a>
+  </li>
+  <li class="next">
+    <a href="07_Setting.html"
+       title="次の章へ"><span class="section-number">9. </span>設定 →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2020 - 2021, ◆Y0H0G.GOFk.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2 with <a href="https://github.com/romnnn/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>

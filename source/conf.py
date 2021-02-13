@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'dco.yaruyomi.com'
-copyright = '2020, ◆Y0H0G.GOFk'
+copyright = '2020 - 2021, ◆Y0H0G.GOFk'
 author = '◆Y0H0G.GOFk'
 
 # The full version, including alpha/beta/rc tags

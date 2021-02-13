@@ -4,7 +4,7 @@
 ################################
 
 当マニュアルは
-`◆Y0H0G.GOFk <https://twitter.com/Yaruyomi>`_
+`◆Y0H0G.GOFk <https://twitter.com/YaruyomiApp>`_
 が運営しているウェブサイトのマニュアルとなります。
 
 以下を運営しています。
@@ -18,7 +18,7 @@
 **********************************
 
 当ドキュメントは Git にて管理していますので、
-`https://gitlab.com/miklabo/doc.yaruyomi.com <https://gitlab.com/miklabo/doc.yaruyomi.com>`_
+`https://gitlab.com/omtky/doc.yaruyomi.com <https://gitlab.com/omtky/doc.yaruyomi.com>`_
 を参照して下さい。
 
 作成ツール

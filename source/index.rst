@@ -16,6 +16,7 @@ doc.yaruyomi.com
    /UserPage/04_CreateWork
    /UserPage/05_WorkManage
    /UserPage/06_AutoPost
+   /UserPage/08_PostSchedule
    /UserPage/07_Setting
 
 .. toctree::
