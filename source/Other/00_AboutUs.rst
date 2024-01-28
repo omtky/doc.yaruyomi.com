@@ -11,15 +11,7 @@
 
 * `Yaruyomi <https://www.yaruyomi.com/>`_
 * `普通のやる夫板 <https://bbs.yaruyomi.com/ban/>`_
-* `大人の普通のやる夫板 <https://bbs18.yaruyomi.com/ban/>`_
 * `AAMZ Viewer <https://aa.yaruyomi.com/>`_
-
-更新履歴
-**********************************
-
-当ドキュメントは Git にて管理していますので、
-`https://gitlab.com/omtky/doc.yaruyomi.com <https://gitlab.com/omtky/doc.yaruyomi.com>`_
-を参照して下さい。
 
 作成ツール
 **********************************
